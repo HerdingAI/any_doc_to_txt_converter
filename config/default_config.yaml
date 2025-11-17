@@ -1,0 +1,31 @@
+# Default Configuration for Document to Text Converter
+
+# Input and Output Directories
+input_folder: ./input
+output_folder: ./output
+
+# Processing Configuration
+batch_size: 10              # Maximum number of documents to process in parallel
+max_memory_gb: 10           # Maximum RAM usage in GB
+
+# Logging Configuration
+log_level: INFO             # DEBUG, INFO, WARNING, ERROR, CRITICAL
+log_file: ./logs/converter.log
+
+# Supported File Formats
+supported_formats:
+  - pdf
+  - docx
+  - xlsx
+  - pptx
+  - html
+  - htm
+  - md
+  - markdown
+  - epub
+  - mobi
+
+# Processing Options
+preserve_structure: true    # Preserve headings, paragraphs, etc.
+skip_on_error: true         # Continue processing if a file fails
+overwrite_existing: false   # Overwrite existing output files
