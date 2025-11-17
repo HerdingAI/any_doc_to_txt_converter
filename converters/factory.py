@@ -12,6 +12,8 @@ from .html_converter import HTMLConverter
 from .markdown_converter import MarkdownConverter
 from .epub_converter import EPUBConverter
 from .mobi_converter import MOBIConverter
+from .vtt_converter import VTTConverter
+from .srt_converter import SRTConverter
 
 
 class ConverterFactory:
@@ -29,6 +31,8 @@ class ConverterFactory:
         '.markdown': MarkdownConverter,
         '.epub': EPUBConverter,
         '.mobi': MOBIConverter,
+        '.vtt': VTTConverter,
+        '.srt': SRTConverter,
     }
 
     @classmethod
