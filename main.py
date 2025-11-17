@@ -3,7 +3,7 @@
 Document to Text Converter - Main Entry Point
 
 Converts various document formats to plain text with structure preservation.
-Supports: PDF, DOCX, XLSX, PPTX, HTML, Markdown, EPUB, MOBI
+Supports: PDF, DOCX, XLSX, PPTX, HTML, Markdown, EPUB, MOBI, VTT, SRT
 """
 import argparse
 import sys
@@ -34,7 +34,7 @@ Examples:
   # Show supported formats
   python main.py --list-formats
 
-Supported formats: PDF, DOCX, XLSX, PPTX, HTML, Markdown, EPUB, MOBI
+Supported formats: PDF, DOCX, XLSX, PPTX, HTML, Markdown, EPUB, MOBI, VTT, SRT
         """
     )
 
@@ -108,7 +108,8 @@ def list_supported_formats():
         'Microsoft Office': ['.docx', '.xlsx', '.pptx'],
         'Web Documents': ['.html', '.htm'],
         'Markdown': ['.md', '.markdown'],
-        'E-books': ['.epub', '.mobi']
+        'E-books': ['.epub', '.mobi'],
+        'Transcripts': ['.vtt', '.srt']
     }
 
     for category, extensions in formats.items():

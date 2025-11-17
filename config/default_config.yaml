@@ -24,6 +24,8 @@ supported_formats:
   - markdown
   - epub
   - mobi
+  - vtt
+  - srt
 
 # Processing Options
 preserve_structure: true    # Preserve headings, paragraphs, etc.

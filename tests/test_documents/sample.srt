@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:02,500
+Welcome to the document conversion system.
+
+2
+00:00:02,500 --> 00:00:05,000
+This system supports multiple file formats.
+
+3
+00:00:05,000 --> 00:00:08,000
+Including PDF, Word, and Excel documents.
+
+4
+00:00:08,000 --> 00:00:11,500
+It also supports <i>transcripts</i> like VTT and SRT.
+
+5
+00:00:11,500 --> 00:00:15,000
+The system can process up to 10 documents in parallel.
+
+6
+00:00:15,000 --> 00:00:18,000
+Memory usage is monitored to prevent crashes.
+
+7
+00:00:18,000 --> 00:00:21,500
+Structure preservation maintains headings and formatting.
+
+8
+00:00:21,500 --> 00:00:25,000
+Thank you for using the document converter!

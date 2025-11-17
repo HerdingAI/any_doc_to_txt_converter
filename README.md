@@ -4,7 +4,7 @@ A robust, high-performance Python system for converting various document formats
 
 ## Features
 
-- **Multiple Format Support**: PDF, DOCX, XLSX, PPTX, HTML, Markdown, EPUB, MOBI
+- **Multiple Format Support**: PDF, DOCX, XLSX, PPTX, HTML, Markdown, EPUB, MOBI, VTT, SRT
 - **Parallel Processing**: Process up to 10 documents simultaneously
 - **Memory-Safe**: Built-in memory monitoring (configurable limit)
 - **Structure Preservation**: Maintains headings, paragraphs, tables
@@ -125,6 +125,8 @@ overwrite_existing: false   # Overwrite existing files
 | Markdown | `.md`, `.markdown` | Structure preservation |
 | EPUB | `.epub` | Chapter markers, structured text |
 | MOBI | `.mobi` | E-book content extraction |
+| VTT | `.vtt` | WebVTT transcripts with timestamps |
+| SRT | `.srt` | SubRip subtitles with timestamps |
 
 ## Structure Preservation
 
@@ -135,6 +137,7 @@ When `preserve_structure: true` is enabled:
 - **Pages**: PDF pages separated with markers
 - **Slides**: PowerPoint slides numbered
 - **Sheets**: Excel sheets labeled
+- **Timestamps**: VTT/SRT timestamps preserved in brackets
 
 Example output with structure:
 ```
@@ -148,6 +151,15 @@ This is a paragraph of text.
 Header 1 | Header 2 | Header 3
 Value 1  | Value 2  | Value 3
 [/TABLE]
+```
+
+Example transcript output with timestamps:
+```
+[00:00:00.000 --> 00:00:02.500]
+Welcome to the presentation.
+
+[00:00:02.500 --> 00:00:05.000]
+Today we'll discuss document conversion.
 ```
 
 ## Performance
@@ -214,6 +226,8 @@ any_doc_to_txt_converter/
 │   ├── markdown_converter.py
 │   ├── epub_converter.py
 │   ├── mobi_converter.py
+│   ├── vtt_converter.py
+│   ├── srt_converter.py
 │   └── factory.py
 ├── core/                  # Core processing engine
 │   ├── batch_processor.py
@@ -302,6 +316,11 @@ For issues, questions, or contributions:
 
 ## Changelog
 
+### Version 1.1.0
+- Added support for transcript formats (VTT and SRT)
+- Enhanced structure preservation for timestamps
+- Updated documentation and examples
+
 ### Version 1.0.0
 - Initial release
 - Support for 8 document formats
@@ -314,10 +333,11 @@ For issues, questions, or contributions:
 ## Acknowledgments
 
 Built with:
-- pdfplumber - PDF text extraction
+- PyPDF2 - PDF text extraction
 - python-docx - Word document processing
 - openpyxl - Excel spreadsheet handling
 - python-pptx - PowerPoint processing
 - BeautifulSoup - HTML/XML parsing
 - ebooklib - EPUB processing
 - mobi - MOBI e-book handling
+- Native Python (re module) - VTT and SRT transcript processing
